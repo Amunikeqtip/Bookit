@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Properties - Bookit</title>
+    <meta name="description" content="Find and book your perfect accommodation anywhere in the world." />
+    <meta name="author" content="Bookit" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="logo">
+            <a href="home.html">Bookit</a>
+          </div>
+          
+          <nav class="desktop-nav">
+            <a href="home.html">Home</a>
+            <a href="explore.html" class="active">Explore</a>
+            <a href="about.html">About</a>
+          </nav>
+          
+          <div class="auth-buttons">
+            <button class="btn btn-ghost">Login</button>
+            <button class="btn btn-primary">Sign Up</button>
+          </div>
+          
+          <button class="mobile-menu-button" id="mobileMenuButton">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="container">
+          <div class="mobile-menu-header">
+            <div class="logo">Bookit</div>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          
+          <nav class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="about.html">About</a>
+            
+            <div class="mobile-auth">
+              <button class="btn btn-outline btn-full">Login</button>
+              <button class="btn btn-primary btn-full">Sign Up</button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="search-section">
+        <div class="container">
+          <h1>Find Your Perfect Property</h1>
+          
+          <div class="search-box">
+            <form class="search-form" id="searchForm">
+              <div class="search-grid">
+                <div class="search-item">
+                  <label>Where</label>
+                  <div class="input-icon">
+                    <i class="fas fa-search"></i>
+                    <input type="text" name="location" id="locationInput" placeholder="Location">
+                  </div>
+                </div>
+                
+                <div class="search-item">
+                  <label>When</label>
+                  <div class="input-icon">
+                    <i class="fas fa-calendar"></i>
+                    <input type="date" name="date" id="dateInput">
+                  </div>
+                </div>
+                
+                <div class="search-item">
+                  <label>Price</label>
+                  <select name="price" id="priceInput">
+                    <option value="">Price Range</option>
+                    <option value="1">Less than $60</option>
+                    <option value="2">$60 - $120</option>
+                    <option value="3">$121 - $200</option>
+                    <option value="4">$200+</option>
+                  </select>
+                </div>
+                
+                <div class="search-item">
+                  <button type="submit" class="btn btn-primary btn-search">
+                    <i class="fas fa-search"></i>
+                    Search
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      
+      <section class="properties-section">
+        <div class="container">
+          <div class="filter-bar">
+            <div class="results-info">
+              <h2 id="resultsTitle">All Properties</h2>
+              <p id="resultsCount">9 properties found</p>
+            </div>
+            
+            <div class="filter-controls">
+              <div class="filter-item">
+                <select id="propertyTypeFilter">
+                  <option value="all">All Types</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="house">House</option>
+                  <option value="villa">Villa</option>
+                  <option value="cabin">Cabin</option>
+                  <option value="loft">Loft</option>
+                </select>
+              </div>
+              
+              <div class="filter-item">
+                <select id="sortFilter">
+                  <option value="recommended">Recommended</option>
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                  <option value="rating">Highest Rated</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <div class="property-grid" id="propertiesGrid">
+            <!-- Properties will be loaded here by JavaScript -->
+          </div>
+          
+          <div id="noResults" class="no-results hidden">
+            <p>No properties found matching your criteria.</p>
+            <p>Try adjusting your search filters.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Company Info -->
+          <div class="footer-column">
+            <a href="index.html" class="footer-logo">Bookit</a>
+            <p class="footer-description">
+              Find and book your perfect accommodation anywhere. From luxury homes to cozy rooms, we've got you covered.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="explore.html">Explore</a></li>
+              <li><a href="locations.html">Locations</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Support Links -->
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul class="footer-links">
+              <li><a href="help.html">Help Center</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Bookit. All rights reserved.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-code-here.js" crossorigin="anonymous"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
